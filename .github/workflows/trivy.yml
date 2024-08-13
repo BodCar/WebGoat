@@ -29,6 +29,7 @@ jobs:
                 
             - name: Run Trivy vulnerability scanner
               uses: aquasecurity/trivy-action@master
+              if: always()
               with:
                 image-ref: 'localbuild/testimage:latest'
                 format: 'sarif'
